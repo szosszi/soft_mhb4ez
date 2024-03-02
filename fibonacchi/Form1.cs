@@ -9,7 +9,7 @@ namespace fibonacchi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<Sor> sorok =  new List<Sor>();
+            List<Sor> sorok = new List<Sor>();
             for (int i = 0; i < 10; i++)
             {
                 Sor ujsor = new Sor();
