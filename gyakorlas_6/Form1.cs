@@ -79,6 +79,7 @@ namespace gyakorlas_6
             #endregion
 
             #region Véletlenszerûségek
+            /*
             Random random = new Random();
             for (int i = 0; i < 100; i++)
             {
@@ -94,7 +95,68 @@ namespace gyakorlas_6
                 kisgomb.BackColor = Color.FromArgb(r, g, b);
                 Controls.Add(kisgomb);
             }
+            */
+            #endregion
 
+            #region Rakd ki egy 10x10-es gombokból álló mátrix gombjait fõátlóba!
+            /*
+            int meret = 40;
+
+            for (int sor = 0; sor < 10; sor++)
+            {
+                for (int oszlop = 0; oszlop < 10; oszlop++) 
+                {
+                    
+                    if (oszlop < sor)
+                    {
+                        Button gombigombi = new Button();
+                        gombigombi.Height = meret;
+                        gombigombi.Width = meret;
+                        gombigombi.Top = meret * sor;
+                        gombigombi.Left = meret*oszlop;
+                        Controls.Add(gombigombi);
+
+                    }
+                    
+                }
+            }*/
+            #endregion
+
+
+            #region  Fenyõfa <3
+
+            int meret = 40;
+            
+            for (int sor = 0; sor < 10; sor++)
+            {
+                for (int oszlop = 0; oszlop < sor+1; oszlop++)
+                {
+                    int ennyiNegyzetVanASorban = sor + 1;
+                    int osszesKockaSzelesseg = ennyiNegyzetVanASorban * meret;
+                    int ablak = ClientRectangle.Width;
+
+                    Button kisgombi = new Button();
+                    kisgombi.Height = meret;
+                    kisgombi.Width = meret;
+                    kisgombi.Top = meret * sor;
+                    kisgombi.BackColor = Color.Green;
+                    kisgombi.Left = meret * oszlop + (ClientRectangle.Width/2) - (osszesKockaSzelesseg / 2);
+                    Controls.Add(kisgombi);
+                    
+
+                }
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Button torzs = new Button();
+                torzs.Height = meret;
+                torzs.Width = meret;
+                torzs.BackColor = Color.Brown;
+                torzs.Top = meret * 10;
+                torzs.Left = ClientRectangle.Width / 2 - meret*i;
+                Controls.Add(torzs);
+            }
+            
             #endregion
         }
     }

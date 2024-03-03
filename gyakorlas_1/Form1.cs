@@ -29,7 +29,7 @@ namespace gyakorlas_1
                 hatralek += haviKamat * (hatralek/100m);
                
 
-                if (hatralek < haviTorl)
+                if (hatralek <= haviTorl)
                 {
                     eppenirom.Hatralekoszlop = 0;
                     eppenirom.Honaposzlop = honap+1;
