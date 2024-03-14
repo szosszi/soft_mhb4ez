@@ -21,6 +21,7 @@ namespace otodik_gyakorlat
                 OsszesKerdes.RemoveAt(0);
             }
             dataGridView1.DataSource = AKtualisKerdesek;
+            KerdesMegjelenites(AKtualisKerdesek[MegjelenitettKerdesekSzama]);
         }
         List<Kerdes> KerdesekBetoltese()
         {
@@ -52,5 +53,61 @@ namespace otodik_gyakorlat
             sr.Close();
             return kerdesek;
         }
+
+        void KerdesMegjelenites(Kerdes kerdes)
+        {
+            textBox1.Text = kerdes.Válasz1;
+            textBox2.Text = kerdes.Válasz2;
+            textBox3.Text = kerdes.Válasz3;
+            label1.Text = kerdes.KérdésSzöveg;
+
+            if (string.IsNullOrEmpty(kerdes.URL))
+            {
+                pictureBox1.Visible = false;
+            }
+            else
+            {
+
+                pictureBox1.Visible = true;
+                pictureBox1.Load("https://storage.altinum.hu/hajo/" + kerdes.URL);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MegjelenitettKerdesekSzama++;
+            if (MegjelenitettKerdesekSzama == AKtualisKerdesek.Count)
+            {
+                MegjelenitettKerdesekSzama = 0;
+            }
+            KerdesMegjelenites(AKtualisKerdesek[MegjelenitettKerdesekSzama]);
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.Salmon;
+            Szinezes();
+
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            textBox2.BackColor = Color.Salmon;
+            Szinezes();
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox3.BackColor = Color.Salmon;
+            Szinezes();
+        }
+        void Szinezes()
+        {
+            int helyesValasz = AKtualisKerdesek[MegjelenitettKerdesekSzama].HelyesVálasz;
+            if(helyesValasz == 1) textBox1.BackColor = Color.LightGreen;
+            if (helyesValasz == 2) textBox2.BackColor = Color.LightGreen;
+            if (helyesValasz == 3) textBox3.BackColor = Color.LightGreen;
+        }
     }
+        
 }
