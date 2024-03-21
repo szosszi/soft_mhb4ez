@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gyakorlas_5", "gyakorlas_5\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gyakorlas_6", "gyakorlas_6\gyakorlas_6.csproj", "{5E618F22-F906-4D73-80F3-3E8ACC565732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "otodik_gyakorlat", "otodik_gyakorlat\otodik_gyakorlat.csproj", "{27A6676C-1A7A-4719-8A1A-C6C56EADB607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "otodik_gyakorlat", "otodik_gyakorlat\otodik_gyakorlat.csproj", "{27A6676C-1A7A-4719-8A1A-C6C56EADB607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kigyok_kigyoznak", "kigyok_kigyoznak\kigyok_kigyoznak.csproj", "{A2E9473F-2E39-4B31-B0E6-C58BBA24C848}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{27A6676C-1A7A-4719-8A1A-C6C56EADB607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27A6676C-1A7A-4719-8A1A-C6C56EADB607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27A6676C-1A7A-4719-8A1A-C6C56EADB607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E9473F-2E39-4B31-B0E6-C58BBA24C848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E9473F-2E39-4B31-B0E6-C58BBA24C848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E9473F-2E39-4B31-B0E6-C58BBA24C848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E9473F-2E39-4B31-B0E6-C58BBA24C848}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
