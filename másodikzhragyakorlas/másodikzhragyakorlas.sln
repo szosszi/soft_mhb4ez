@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_gyak", "6_gyak\6_gyak.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mintazh_eloadason_megoldva", "mintazh_eloadason_megoldva\mintazh_eloadason_megoldva.csproj", "{8EDE939D-BE89-4905-A352-776B6218EA65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gyakorlo_sor_8_het", "gyakorlo_sor_8_het\gyakorlo_sor_8_het.csproj", "{40056D56-FE74-4CF6-BEC8-710ECFA6E169}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8EDE939D-BE89-4905-A352-776B6218EA65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EDE939D-BE89-4905-A352-776B6218EA65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EDE939D-BE89-4905-A352-776B6218EA65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40056D56-FE74-4CF6-BEC8-710ECFA6E169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40056D56-FE74-4CF6-BEC8-710ECFA6E169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40056D56-FE74-4CF6-BEC8-710ECFA6E169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40056D56-FE74-4CF6-BEC8-710ECFA6E169}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
