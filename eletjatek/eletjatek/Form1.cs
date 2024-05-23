@@ -6,7 +6,8 @@ namespace eletjatek
     {
         private bool[,] pálya;
         private bool[,] újPálya;
-        int n = 20; // Példa sorok száma
+
+        int n = 20;// Példa sorok száma
         int m = 40; // Példa oszlopok száma
 
         public Form1()
@@ -16,6 +17,7 @@ namespace eletjatek
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
 
             pálya = new bool[n, m];
             újPálya = new bool[n, m];
@@ -24,9 +26,9 @@ namespace eletjatek
             dataGridViewPálya.RowCount = n;
             dataGridViewPálya.RowHeadersWidth = 60;
             dataGridViewPálya.RowTemplate.Height = dataGridViewPálya.Height / n;
-            dataGridViewPálya.Dock = DockStyle.Fill;
+            //dataGridViewPálya.Dock = DockStyle.Fill;
 
-            
+
             for (int i = 0; i < m; i++)
             {
                 dataGridViewPálya.Columns[i].Width = (dataGridViewPálya.Width - dataGridViewPálya.RowHeadersWidth * 2) / m;
@@ -53,7 +55,7 @@ namespace eletjatek
                     }
                 }
             }
-            
+
         }
 
 
@@ -81,6 +83,7 @@ namespace eletjatek
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+        
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
@@ -96,14 +99,14 @@ namespace eletjatek
                     }
                 }
             }
-            
+
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
                     pálya[i, j] = újPálya[i, j];
                     dataGridViewPálya.Rows[i].Cells[j].Value = pálya[i, j] ? "1" : "0";
-                    
+
                     if (dataGridViewPálya.Rows[i].Cells[j].Value == "1")
                     {
                         dataGridViewPálya.Rows[i].Cells[j].Style.BackColor = Color.Black;
@@ -116,7 +119,25 @@ namespace eletjatek
                     }
                 }
             }
+
+        }
+
+        private void start_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
             
+            timer1.Stop();
+        }
+
+        private void stop_clear_Click(object sender, EventArgs e)
+        {
+            dataGridViewPálya.Rows.Clear();
+            dataGridViewPálya.Columns.Clear();
+            timer1.Stop();
         }
     }
 }

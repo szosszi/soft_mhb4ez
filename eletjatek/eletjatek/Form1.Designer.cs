@@ -31,7 +31,8 @@
             components = new System.ComponentModel.Container();
             dataGridViewPálya = new DataGridView();
             timer1 = new System.Windows.Forms.Timer(components);
-            label1 = new Label();
+            start = new Button();
+            stop_clear = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPálya).BeginInit();
             SuspendLayout();
             // 
@@ -41,42 +42,53 @@
             dataGridViewPálya.Location = new Point(12, 60);
             dataGridViewPálya.Name = "dataGridViewPálya";
             dataGridViewPálya.RowHeadersWidth = 62;
-            dataGridViewPálya.Size = new Size(1021, 627);
+            dataGridViewPálya.Size = new Size(1053, 737);
             dataGridViewPálya.TabIndex = 2;
             // 
             // timer1
             // 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
+            timer1.Interval = 700;
             timer1.Tick += timer1_Tick;
             // 
-            // label1
+            // start
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(62, 635);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 25);
-            label1.TabIndex = 3;
-            label1.Text = "label1";
+            start.Location = new Point(12, 12);
+            start.Name = "start";
+            start.Size = new Size(112, 34);
+            start.TabIndex = 4;
+            start.Text = "START";
+            start.UseVisualStyleBackColor = true;
+            start.Click += start_Click;
+            // 
+            // stop_clear
+            // 
+            stop_clear.Location = new Point(160, 12);
+            stop_clear.Name = "stop_clear";
+            stop_clear.Size = new Size(208, 34);
+            stop_clear.TabIndex = 7;
+            stop_clear.Text = "STOPandCLEAR";
+            stop_clear.UseVisualStyleBackColor = true;
+            stop_clear.Click += stop_clear_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1198, 827);
-            Controls.Add(label1);
+            Controls.Add(stop_clear);
+            Controls.Add(start);
             Controls.Add(dataGridViewPálya);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewPálya).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
         private DataGridView dataGridViewPálya;
         public System.Windows.Forms.Timer timer1;
-        private Label label1;
+        private Button start;
+        private Button stop_clear;
     }
 }
