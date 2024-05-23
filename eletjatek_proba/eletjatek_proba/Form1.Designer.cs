@@ -1,4 +1,4 @@
-﻿namespace eletjatek
+﻿namespace eletjatek_proba
 {
     partial class Form1
     {
@@ -31,52 +31,39 @@
             components = new System.ComponentModel.Container();
             dataGridViewPálya = new DataGridView();
             timer1 = new System.Windows.Forms.Timer(components);
-            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPálya).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewPálya
             // 
             dataGridViewPálya.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPálya.Location = new Point(12, 60);
+            dataGridViewPálya.Location = new Point(25, 22);
             dataGridViewPálya.Name = "dataGridViewPálya";
             dataGridViewPálya.RowHeadersWidth = 62;
-            dataGridViewPálya.Size = new Size(1021, 627);
-            dataGridViewPálya.TabIndex = 2;
+            dataGridViewPálya.Size = new Size(1176, 597);
+            dataGridViewPálya.TabIndex = 0;
             // 
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(62, 635);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 25);
-            label1.TabIndex = 3;
-            label1.Text = "label1";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1198, 827);
-            Controls.Add(label1);
+            ClientSize = new Size(1213, 654);
             Controls.Add(dataGridViewPálya);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewPálya).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
+
         private DataGridView dataGridViewPálya;
         public System.Windows.Forms.Timer timer1;
-        private Label label1;
     }
 }
